@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
@@ -16,7 +17,7 @@ function ProjectDetails() {
   const fetchProject = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/projects/${id}`
+        `${API_URL}/api/projects/${id}`
       );
 
       const data = await response.json();
@@ -41,7 +42,7 @@ function ProjectDetails() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/join-requests/${id}`,
+        `${API_URL}/api/join-requests/${id}`,
         {
           method: "POST",
           headers: {
@@ -80,7 +81,7 @@ function ProjectDetails() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/projects/${id}`,
+        `${API_URL}/api/projects/${id}`,
         {
           method: "DELETE",
           headers: {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { API_URL } from "../config";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -33,7 +34,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/login",
+        `${API_URL}/api/auth/login`,
         {
           method: "POST",
           headers: {
@@ -79,7 +80,6 @@ function Login() {
       <div style={glowOne}></div>
       <div style={glowTwo}></div>
 
-
       <div style={contentWrapper}>
 
         {/* Logo */}
@@ -87,7 +87,6 @@ function Login() {
         <div style={logoStyle}>
           ProjXTeam <span>🚀</span>
         </div>
-
 
         {/* Login Card */}
 
@@ -111,7 +110,6 @@ function Login() {
             </p>
 
           </div>
-
 
           {/* Form */}
 
@@ -137,7 +135,6 @@ function Login() {
 
             </div>
 
-
             {/* Password */}
 
             <div style={formGroup}>
@@ -157,7 +154,6 @@ function Login() {
               />
 
             </div>
-
 
             {/* Login Button */}
 
@@ -179,7 +175,6 @@ function Login() {
 
           </form>
 
-
           {/* Divider */}
 
           <div style={divider}>
@@ -187,7 +182,6 @@ function Login() {
             <small>OR</small>
             <span></span>
           </div>
-
 
           {/* Register */}
 
@@ -203,7 +197,6 @@ function Login() {
 
         </div>
 
-
         {/* Footer */}
 
         <p style={footerText}>
@@ -216,7 +209,6 @@ function Login() {
     </div>
   );
 }
-
 
 // ==========================================
 // STYLES

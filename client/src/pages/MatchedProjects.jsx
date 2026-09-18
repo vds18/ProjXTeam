@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../config";
 
 function MatchedProjects() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ function MatchedProjects() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/matching/projects",
+        `${API_URL}/api/matching/projects`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

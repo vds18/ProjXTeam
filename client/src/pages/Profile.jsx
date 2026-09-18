@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Profile.css";
+import { API_URL } from "../config";
 
 function Profile() {
   const [user, setUser] = useState(null);
@@ -22,7 +23,7 @@ function Profile() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/profile",
+        `${API_URL}/api/auth/profile`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -67,7 +68,7 @@ function Profile() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/profile",
+        `${API_URL}/api/auth/profile`,
         {
           method: "PUT",
           headers: {
@@ -201,7 +202,6 @@ function Profile() {
 
         </section>
 
-
         {/* =========================
             PROFILE STATS
         ========================= */}
@@ -222,7 +222,6 @@ function Profile() {
             </div>
           </div>
 
-
           <div className="profile-stat-card">
             <div className="profile-stat-icon pink">
               💡
@@ -237,7 +236,6 @@ function Profile() {
             </div>
           </div>
 
-
           <div className="profile-stat-card">
             <div className="profile-stat-icon blue">
               🎯
@@ -251,7 +249,6 @@ function Profile() {
               <span>Experience</span>
             </div>
           </div>
-
 
           <div className="profile-stat-card">
             <div className="profile-stat-icon green">
@@ -268,7 +265,6 @@ function Profile() {
           </div>
 
         </section>
-
 
         {/* =========================
             COMPLETION
@@ -315,7 +311,6 @@ function Profile() {
 
         </section>
 
-
         {/* =========================
             ABOUT + DETAILS
         ========================= */}
@@ -343,7 +338,6 @@ function Profile() {
               "No bio added yet. Tell potential teammates about yourself."}
           </p>
 
-
           {/* DETAILS */}
 
           <div className="profile-details">
@@ -363,7 +357,6 @@ function Profile() {
               </div>
             </div>
 
-
             <div className="detail-box">
               <span className="detail-icon">
                 🛠️
@@ -377,7 +370,6 @@ function Profile() {
                 </strong>
               </div>
             </div>
-
 
             <div className="detail-box">
               <span className="detail-icon">
@@ -394,7 +386,6 @@ function Profile() {
             </div>
 
           </div>
-
 
           {/* =========================
               SKILLS
@@ -430,7 +421,6 @@ function Profile() {
             </div>
 
           </div>
-
 
           {/* =========================
               INTERESTS
@@ -471,7 +461,6 @@ function Profile() {
 
         </section>
 
-
         {/* =========================
             EDIT PROFILE
         ========================= */}
@@ -499,7 +488,6 @@ function Profile() {
 
           </div>
 
-
           <form onSubmit={handleSubmit}>
 
             {/* NAME */}
@@ -520,7 +508,6 @@ function Profile() {
               />
 
             </div>
-
 
             {/* BIO */}
 
@@ -545,7 +532,6 @@ function Profile() {
 
             </div>
 
-
             {/* SKILLS */}
 
             <div className="form-group">
@@ -568,7 +554,6 @@ function Profile() {
 
             </div>
 
-
             {/* INTERESTS */}
 
             <div className="form-group">
@@ -590,7 +575,6 @@ function Profile() {
               </small>
 
             </div>
-
 
             {/* EXPERIENCE */}
 
@@ -623,7 +607,6 @@ function Profile() {
               </select>
 
             </div>
-
 
             {/* SAVE */}
 

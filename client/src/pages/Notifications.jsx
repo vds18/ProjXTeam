@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../config";
 
 function Notifications() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ function Notifications() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/notifications",
+        `${API_URL}/api/notifications`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -43,7 +44,7 @@ function Notifications() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/notifications/${notificationId}/read`,
+        `${API_URL}/api/notifications/${notificationId}/read`,
         {
           method: "PUT",
           headers: {
@@ -75,7 +76,7 @@ function Notifications() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/notifications/read-all",
+        `${API_URL}/api/notifications/read-all`,
         {
           method: "PUT",
           headers: {

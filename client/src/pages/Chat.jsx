@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { io } from "socket.io-client";
@@ -31,7 +32,7 @@ function Chat() {
   const fetchProject = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/projects/${id}`
+        `${API_URL}/api/projects/${id}`
       );
 
       const data = await response.json();
@@ -52,7 +53,7 @@ function Chat() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/messages/${id}`,
+        `${API_URL}/api/messages/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -80,7 +81,7 @@ function Chat() {
   ========================= */
 
   useEffect(() => {
-    const socket = io("http://localhost:5000", {
+    const socket = io(API_URL, {
       auth: {
         token: localStorage.getItem("token"),
       },
@@ -146,7 +147,7 @@ function Chat() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/messages/${id}`,
+        `${API_URL}/api/messages/${id}`,
         {
           method: "POST",
           headers: {

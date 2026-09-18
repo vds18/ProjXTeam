@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { API_URL } from "../config";
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -34,7 +35,7 @@ function Register() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/register",
+        `${API_URL}/api/auth/register`,
         {
           method: "POST",
           headers: {
@@ -70,7 +71,6 @@ function Register() {
       <div style={glowOne}></div>
       <div style={glowTwo}></div>
 
-
       <div style={contentWrapper}>
 
         {/* Logo */}
@@ -78,7 +78,6 @@ function Register() {
         <div style={logoStyle}>
           ProjXTeam <span>🚀</span>
         </div>
-
 
         {/* Register Card */}
 
@@ -102,7 +101,6 @@ function Register() {
             </p>
 
           </div>
-
 
           {/* Form */}
 
@@ -128,7 +126,6 @@ function Register() {
 
             </div>
 
-
             {/* Email */}
 
             <div style={formGroup}>
@@ -148,7 +145,6 @@ function Register() {
               />
 
             </div>
-
 
             {/* Password */}
 
@@ -175,7 +171,6 @@ function Register() {
 
             </div>
 
-
             {/* Create Account */}
 
             <button
@@ -196,7 +191,6 @@ function Register() {
 
           </form>
 
-
           {/* Divider */}
 
           <div style={divider}>
@@ -206,7 +200,6 @@ function Register() {
             </small>
             <span style={dividerLine}></span>
           </div>
-
 
           {/* Login */}
 
@@ -223,7 +216,6 @@ function Register() {
 
         </div>
 
-
         {/* Footer */}
 
         <p style={footerText}>
@@ -236,7 +228,6 @@ function Register() {
     </div>
   );
 }
-
 
 // ==========================================
 // STYLES

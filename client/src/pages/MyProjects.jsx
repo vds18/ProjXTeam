@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../config";
 
 function MyProjects() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function MyProjects() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/projects/my",
+        `${API_URL}/api/projects/my`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

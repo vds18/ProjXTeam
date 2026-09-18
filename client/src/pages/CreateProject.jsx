@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -32,7 +33,7 @@ function CreateProject() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/projects",
+        `${API_URL}/api/projects`,
         {
           method: "POST",
           headers: {
@@ -78,7 +79,6 @@ function CreateProject() {
 
   return (
     <div className="create-project-page">
-
       <div className="create-project-container">
 
         {/* =========================
@@ -109,7 +109,6 @@ function CreateProject() {
 
         </div>
 
-
         {/* =========================
             FORM CARD
         ========================= */}
@@ -123,6 +122,7 @@ function CreateProject() {
             <div className="create-section">
 
               <div className="create-section-heading">
+
                 <div className="create-section-icon">
                   💡
                 </div>
@@ -133,8 +133,8 @@ function CreateProject() {
                     Tell people what you're building.
                   </p>
                 </div>
-              </div>
 
+              </div>
 
               {/* TITLE */}
 
@@ -159,7 +159,6 @@ function CreateProject() {
                 </small>
 
               </div>
-
 
               {/* DESCRIPTION */}
 
@@ -188,12 +187,12 @@ function CreateProject() {
 
             </div>
 
-
             {/* SKILLS & INTERESTS */}
 
             <div className="create-section">
 
               <div className="create-section-heading">
+
                 <div className="create-section-icon">
                   🧩
                 </div>
@@ -204,8 +203,8 @@ function CreateProject() {
                     Define what your project needs.
                   </p>
                 </div>
-              </div>
 
+              </div>
 
               {/* SKILLS */}
 
@@ -228,7 +227,6 @@ function CreateProject() {
                 </small>
 
               </div>
-
 
               {/* INTERESTS */}
 
@@ -254,12 +252,12 @@ function CreateProject() {
 
             </div>
 
-
             {/* TEAM DETAILS */}
 
             <div className="create-section">
 
               <div className="create-section-heading">
+
                 <div className="create-section-icon">
                   👥
                 </div>
@@ -270,8 +268,8 @@ function CreateProject() {
                     Tell potential teammates what you're looking for.
                   </p>
                 </div>
-              </div>
 
+              </div>
 
               <div className="create-two-column">
 
@@ -300,7 +298,6 @@ function CreateProject() {
 
                 </div>
 
-
                 {/* DURATION */}
 
                 <div className="create-form-group">
@@ -324,7 +321,6 @@ function CreateProject() {
                 </div>
 
               </div>
-
 
               {/* EXPERIENCE */}
 
@@ -360,7 +356,6 @@ function CreateProject() {
 
             </div>
 
-
             {/* SMART MATCHING */}
 
             <div className="create-smart-box">
@@ -382,7 +377,6 @@ function CreateProject() {
               </div>
 
             </div>
-
 
             {/* BUTTONS */}
 
@@ -420,7 +414,6 @@ function CreateProject() {
         </div>
 
       </div>
-
     </div>
   );
 }

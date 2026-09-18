@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../config";
 
 function JoinRequests() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function JoinRequests() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/join-requests/my",
+        `${API_URL}/api/join-requests/my`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -46,7 +47,7 @@ function JoinRequests() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/join-requests/${requestId}/accept`,
+        `${API_URL}/api/join-requests/${requestId}/accept`,
         {
           method: "PUT",
           headers: {
@@ -90,7 +91,7 @@ function JoinRequests() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/join-requests/${requestId}/reject`,
+        `${API_URL}/api/join-requests/${requestId}/reject`,
         {
           method: "PUT",
           headers: {

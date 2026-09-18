@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -23,7 +24,7 @@ function EditProject() {
   const fetchProject = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/projects/${id}`
+        `${API_URL}/api/projects/${id}`
       );
 
       const data = await response.json();
@@ -63,7 +64,7 @@ function EditProject() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/projects/${id}`,
+        `${API_URL}/api/projects/${id}`,
         {
           method: "PUT",
           headers: {
@@ -147,7 +148,9 @@ function EditProject() {
 
             {/* Basic Information */}
             <section className="edit-section">
+
               <div className="edit-section-heading">
+
                 <div className="edit-section-icon">
                   📋
                 </div>
@@ -159,10 +162,12 @@ function EditProject() {
                     project.
                   </p>
                 </div>
+
               </div>
 
               {/* Project Title */}
               <div className="edit-form-group">
+
                 <label htmlFor="title">
                   Project Title
                   <span>*</span>
@@ -177,10 +182,12 @@ function EditProject() {
                   placeholder="Enter project title"
                   required
                 />
+
               </div>
 
               {/* Description */}
               <div className="edit-form-group">
+
                 <label htmlFor="description">
                   Project Description
                   <span>*</span>
@@ -194,12 +201,16 @@ function EditProject() {
                   placeholder="Describe your project, its goals, and what you want to build..."
                   required
                 />
+
               </div>
+
             </section>
 
             {/* Team Requirements */}
             <section className="edit-section">
+
               <div className="edit-section-heading">
+
                 <div className="edit-section-icon">
                   👥
                 </div>
@@ -211,10 +222,12 @@ function EditProject() {
                     requirements.
                   </p>
                 </div>
+
               </div>
 
               {/* Skills */}
               <div className="edit-form-group">
+
                 <label htmlFor="skills">
                   Required Skills
                 </label>
@@ -232,6 +245,7 @@ function EditProject() {
                   Separate multiple skills with
                   commas.
                 </small>
+
               </div>
 
               {/* Two Column */}
@@ -239,6 +253,7 @@ function EditProject() {
 
                 {/* Team Size */}
                 <div className="edit-form-group">
+
                   <label htmlFor="teamSize">
                     Team Size
                     <span>*</span>
@@ -258,10 +273,12 @@ function EditProject() {
                     Cannot be smaller than current
                     members.
                   </small>
+
                 </div>
 
                 {/* Duration */}
                 <div className="edit-form-group">
+
                   <label htmlFor="duration">
                     Project Duration
                   </label>
@@ -278,19 +295,24 @@ function EditProject() {
                   <small>
                     Example: 4 weeks, 2 months.
                   </small>
+
                 </div>
 
               </div>
+
             </section>
 
             {/* Update Notice */}
             <div className="edit-smart-box">
+
               <div className="edit-smart-icon">
                 💡
               </div>
 
               <div>
-                <strong>Keep your project updated</strong>
+                <strong>
+                  Keep your project updated
+                </strong>
 
                 <p>
                   Clear project details help potential
@@ -298,6 +320,7 @@ function EditProject() {
                   and decide if your project is a good fit.
                 </p>
               </div>
+
             </div>
 
             {/* Actions */}
@@ -334,6 +357,7 @@ function EditProject() {
             </div>
 
           </form>
+
         </div>
 
       </div>

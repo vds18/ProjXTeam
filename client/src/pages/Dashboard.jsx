@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -17,7 +18,7 @@ function Dashboard() {
   const fetchProjects = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/projects"
+        `${API_URL}/api/projects`
       );
 
       const data = await response.json();
@@ -35,7 +36,7 @@ function Dashboard() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/profile",
+        `${API_URL}/api/auth/profile`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
