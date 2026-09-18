@@ -144,6 +144,42 @@ GitHub: [@vds18](https://github.com/vds18)
 
 LinkedIn: [Vanshika Dutt Srivastava](https://www.linkedin.com/in/vanshika-dutt-srivastava-762168311)
 
----
+## 📸 Screenshots
+
+### Login
+![Login](./screenshot/login.png)
+
+### Create Account
+![Create Account](./screenshot/create-account.png)
+
+### Dashboard
+![Dashboard](./screenshot/dashboard.png)
+
+### Projects
+![Projects](./screenshot/projects.png)
+
+### Project Details
+![Project Details](./screenshot/project-details.png)
+
+### Matching Projects
+![Matching Projects](./screenshot/matching-projects.png)
+
+### My Projects
+![My Projects](./screenshot/my-projects.png)
+
+### Profile
+![Profile](./screenshot/profile.png)
+
+### Edit Profile
+![Edit Profile](./screenshot/edit-profile.png)
+
+### Join Requests
+![Join Requests](./screenshot/join-requests.png)
+
+### Notifications
+![Notifications](./screenshot/notifications.png)
+
+### Team Chat
+![Team Chat](./screenshot/team-chat.png)
 
 ⭐ If you find ProjXTeam useful, consider starring the repository.
